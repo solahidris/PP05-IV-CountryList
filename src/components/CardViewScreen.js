@@ -41,7 +41,7 @@ const CardViewScreen = () => {
         {dataToMap.map((data, index) => (
           <div className="flex flex-col text-sm lg:text-base">
             <span className="bg-red-200">{data.flag}</span>
-            <div className="bg-white rounded px-2 py-3 mt-3">
+            <div className="bg-white rounded drop-shadow-md px-2 py-3 mt-3">
               <span className="font-semibold">{data.country}</span>
               <div className="flex gap-1">
                 <span className="font-semibold">Population:</span>
@@ -64,15 +64,3 @@ const CardViewScreen = () => {
 };
 
 export default CardViewScreen;
-
-<div className="card view - use flex col bg-green-200">
-  <div className="map this">
-    <div className="flex flex-col">
-      <span>flagImage</span>
-      <span>CountryName</span>
-      <span>Population: xxx</span>
-      <span>Region: xxx</span>
-      <span>Capital: xxx</span>
-    </div>
-  </div>
-</div>;

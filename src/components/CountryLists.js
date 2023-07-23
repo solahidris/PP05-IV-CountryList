@@ -1,3 +1,5 @@
+// CountryLists.js
+
 import React from "react";
 import CountryListHeader from "./CountryListHeader";
 import SearchCountry from "./SearchCountry";
@@ -12,8 +14,7 @@ const CountryLists = () => {
     <div>
       <CountryListHeader />
 
-        {/* Delete text px later */}
-      <div className="flex justify-between text-[8px]">
+      <div className="flex justify-between">
         <SearchCountry />
         <div className="flex">
           <FilterRegion />

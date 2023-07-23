@@ -19,6 +19,8 @@ const CodeThinkingProcess = () => {
         <li>Add List & Card View Icons</li>
         <li>Code List View Screen UI</li>
         <li>Code Card View Screen UI</li>
+        <li>Code Country Details - Main</li>
+        <li>Code Country Details Screen & Header UI</li>
       </ol>
 
       <br/>
