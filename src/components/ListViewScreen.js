@@ -28,7 +28,7 @@ const ListViewScreen = () => {
 
   return (
     <div className="mx-5 lg:mx-[4rem]">
-      <div className="grid grid-cols-6 text-xs bg-blue-900 text-white py-4 rounded-t-md font-bold">
+      <div className="grid grid-cols-6 text-xs lg:text-base bg-blue-900 text-white py-4 rounded-t-md font-bold">
         <span></span>
         <span className="truncate ...">Population</span>
         <span>Region</span>
@@ -40,7 +40,7 @@ const ListViewScreen = () => {
       <div>
         {data.map((item, index) => (
           <div
-            className="grid grid-cols-6 py-5 border-b border-gray-200/80 border-mx-2 items-center text-xs"
+            className="grid grid-cols-6 py-3 border-b border-gray-200/80 border-mx-2 items-center text-xs lg:text-base"
             key={index}
           >
             <img
