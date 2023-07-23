@@ -3,6 +3,7 @@ import CountryListHeader from "./CountryListHeader";
 import SearchCountry from "./SearchCountry";
 import FilterRegion from "./FilterRegion";
 import ViewToggleButton from "./ViewToggleButton";
+import { IoList, IoGridOutline } from "react-icons/io5";
 
 const CountryList = () => {
   return (
@@ -12,13 +13,12 @@ const CountryList = () => {
         {/* Delete text px later */}
       <div className="flex justify-between text-[8px]">
         <SearchCountry />
-        <div className="flex bg-red-200">
+        <div className="flex">
           <FilterRegion />
-          <div className="bg-red-400 flex">
-            <span>R-List View</span>
-            <ViewToggleButton />
-            {/* <span>R-Toggle Button</span> */}
-            <span>R-Card View</span>
+          <div className="flex items-center">
+            <IoList className="w-[20px] h-[20px] mx-3"/>
+            <ViewToggleButton/>
+            <IoGridOutline className="w-[20px] h-[20px] mx-3"/>
           </div>
         </div>
       </div>

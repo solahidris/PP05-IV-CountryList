@@ -4,7 +4,7 @@ import React from "react";
 
 const SearchCountry = () => {
   return (
-    <div className="bg-green-300 py-5">
+    <div className="py-5">
       {/* <p>L-Search for a Country</p> */}
       <input
         type="text"
