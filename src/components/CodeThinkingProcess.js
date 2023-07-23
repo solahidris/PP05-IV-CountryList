@@ -11,6 +11,10 @@ const CodeThinkingProcess = () => {
         <li>npm install @babel/plugin-proposal-private-property-in-object</li>
         <li>Start making components, draft remake UI design</li>
         <li>Code Country List Header UI</li>
+        <li>Code Search Country UI</li>
+        <li>Code Filter by Region UI</li>
+        <li>Code View Toggle Button UI</li>
+        <li>Import Icons for View Type</li>
       </ol>
     </div>
   );

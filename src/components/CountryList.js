@@ -1,20 +1,23 @@
 import React from "react";
 import CountryListHeader from "./CountryListHeader";
 import SearchCountry from "./SearchCountry";
+import FilterRegion from "./FilterRegion";
+import ViewToggleButton from "./ViewToggleButton";
 
 const CountryList = () => {
   return (
     <div>
       <CountryListHeader />
 
+        {/* Delete text px later */}
       <div className="flex justify-between text-[8px]">
-        {/* <span className="bg-green-300">L-Search for a Country</span> */}
         <SearchCountry />
         <div className="flex bg-red-200">
-          <span>R-Filter by Region</span>
-          <div className="bg-red-400">
+          <FilterRegion />
+          <div className="bg-red-400 flex">
             <span>R-List View</span>
-            <span>R-Toggle Button</span>
+            <ViewToggleButton />
+            {/* <span>R-Toggle Button</span> */}
             <span>R-Card View</span>
           </div>
         </div>
