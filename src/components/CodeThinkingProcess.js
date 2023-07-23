@@ -22,6 +22,7 @@ const CodeThinkingProcess = () => {
         <li>Code Country Details - Main</li>
         <li>Code Country Details Screen & Header UI</li>
         <li>Install Axios for API</li>
+        <li>Fetch Data from API with Axios</li>
       </ol>
 
       <br/>

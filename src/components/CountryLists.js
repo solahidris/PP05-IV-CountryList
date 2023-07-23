@@ -7,6 +7,7 @@ import FilterRegion from "./FilterRegion";
 import ViewToggleButton from "./ViewToggleButton";
 import { IoList, IoGridOutline } from "react-icons/io5";
 import ListViewScreen from "./ListViewScreen";
+// eslint-disable-next-line
 import CardViewScreen from "./CardViewScreen";
 
 const CountryLists = () => {
@@ -14,7 +15,7 @@ const CountryLists = () => {
     <div>
       <CountryListHeader />
 
-      <div className="flex justify-between">
+      <div className="flex justify-between lg:mx-[3rem]">
         <SearchCountry />
         <div className="flex">
           <FilterRegion />
@@ -26,8 +27,8 @@ const CountryLists = () => {
         </div>
       </div>
 
-      {/* <ListViewScreen /> */}
-      <CardViewScreen />
+      <ListViewScreen />
+      {/* <CardViewScreen /> */}
 
 
 

@@ -1,6 +1,5 @@
 // CountryDetailsScreen.js
 
-import { FaArrowLeft } from "react-icons/fa";
 import { HiArrowLeft } from "react-icons/hi";
 
 const CountryDetailsScreen = () => {

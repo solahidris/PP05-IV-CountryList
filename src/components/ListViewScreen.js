@@ -1,42 +1,33 @@
-// ListViewScreen.js
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const ListViewScreen = () => {
-  const dataToMap = [
-    {
-      flag: "🇦🇩",
-      population: "P1",
-      region: "R1",
-      capital: "CA1",
-      country: "CO1",
-      currency: "CU1",
-    },
-    {
-      flag: "🇦🇪",
-      population: "P2",
-      region: "R2",
-      capital: "CA2",
-      country: "CO2",
-      currency: "CU2",
-    },
-    {
-      flag: "🇦🇮",
-      population: "P3",
-      region: "R3",
-      country: "CO3",
-    },
-    {
-      flag: "🇦🇶",
-      population: "P4",
-      region: "R4",
-      capital: "CA4",
-      country: "CO4",
-      currency: "CU4",
-    },
-  ];
+  const [data, setData] = useState([]);
+
+  // Helper function to format number with commas
+  const numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+
+  useEffect(() => {
+    // Make a GET request to an API endpoint
+    axios
+      .get("https://restcountries.com/v3.1/all")
+      .then((response) => {
+        // Handle the response data
+        setData(response.data);
+
+        // Log the object structure
+        console.log(response.data);
+      })
+      .catch((error) => {
+        // Handle any errors that occurred during the request
+        console.error("Error fetching data:", error);
+      });
+  }, []);
 
   return (
-    <div className="mx-5">
-
+    <div className="mx-5 lg:mx-[4rem]">
       <div className="grid grid-cols-6 text-xs bg-blue-900 text-white py-4 rounded-t-md font-bold">
         <span></span>
         <span className="truncate ...">Population</span>
@@ -47,24 +38,31 @@ const ListViewScreen = () => {
       </div>
 
       <div>
-        {dataToMap.map((data, index) => (
-          <div className="grid grid-cols-6 py-5 border-b border-gray-200/80 border-mx-2 items-center text-xs">
-            <span className="text-center text-[3rem]">{data.flag}</span>
-            <span>{data.population}</span>
-            <span>{data.region}</span>
-            <span>{data?.capital}</span>
-            <span>{data.country}</span>
-            {data.currency && (
+        {data.map((item, index) => (
+          <div
+            className="grid grid-cols-6 py-5 border-b border-gray-200/80 border-mx-2 items-center text-xs"
+            key={index}
+          >
+            <img
+              src={item?.flags?.svg}
+              alt={item?.name?.common}
+              style={{ width: "60px", height: "45px" }}
+              className="justify-self-center"
+            />
+            <span>{numberWithCommas(item?.population)}</span>
+            <span>{item?.region}</span>
+            <span>{item?.capital?.[0]}</span>
+            <span>{item?.name?.common}</span>
+            {item?.currencies && (
               <div>
                 <span className="border rounded-lg px-2 py-1 border-black text-blue-500">
-                  {data.currency}
+                  {Object.keys(item.currencies).join(", ")}
                 </span>
               </div>
             )}
           </div>
         ))}
       </div>
-
     </div>
   );
 };
