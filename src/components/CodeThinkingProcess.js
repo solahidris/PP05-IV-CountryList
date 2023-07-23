@@ -17,6 +17,7 @@ const CodeThinkingProcess = () => {
         <li>Code View Toggle Button UI</li>
         <li>Install React Icons</li>
         <li>Add List & Card View Icons</li>
+        <li>Code List View Screen UI</li>
       </ol>
 
       <br/>
@@ -31,7 +32,7 @@ const CodeThinkingProcess = () => {
         <li>x</li>
         <li>x</li>
       </ul>
-      
+
     </div>
   );
 };

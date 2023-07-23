@@ -4,8 +4,9 @@ import SearchCountry from "./SearchCountry";
 import FilterRegion from "./FilterRegion";
 import ViewToggleButton from "./ViewToggleButton";
 import { IoList, IoGridOutline } from "react-icons/io5";
+import ListViewScreen from "./ListViewScreen";
 
-const CountryList = () => {
+const CountryLists = () => {
   return (
     <div>
       <CountryListHeader />
@@ -23,19 +24,7 @@ const CountryList = () => {
         </div>
       </div>
 
-      <div className="list view - use grid bg-blue-200">
-        <div className="bg-blue-400 flex justify-between">
-          <span>Empty</span>
-          <span>Population</span>
-          <span>Region</span>
-          <span>Capital</span>
-          <span>Country</span>
-          <span>Currency</span>
-        </div>
-        <div className="map this">
-          flagImage population region capital countryName currency
-        </div>
-      </div>
+      <ListViewScreen />
 
       <div className="card view - use flex col bg-green-200">
         <div className="map this">
@@ -54,4 +43,4 @@ const CountryList = () => {
   );
 };
 
-export default CountryList;
+export default CountryLists;

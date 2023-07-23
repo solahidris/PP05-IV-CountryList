@@ -2,12 +2,12 @@ import "./App.css";
 import React from "react";
 import CodeThinkingProcess from "./components/CodeThinkingProcess";
 import CodeInstructions from "./components/CodeInstructions";
-import CountryList from "./components/CountryList";
+import CountryLists from "./components/CountryLists";
 
 function App() {
   return (
-    <div className="bg-stone min-h-[100vh]">
-      <CountryList />
+    <div className="bg-stone-100/50 min-h-[100vh]">
+      <CountryLists />
       <div>
         <p className="py-5">hi</p>
         <p className="py-5">hi</p>
