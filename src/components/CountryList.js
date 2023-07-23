@@ -16,9 +16,9 @@ const CountryList = () => {
         <div className="flex">
           <FilterRegion />
           <div className="flex items-center">
-            <IoList className="w-[20px] h-[20px] mx-3"/>
+            <IoList className="w-[17px] h-[17px] mx-3"/>
             <ViewToggleButton/>
-            <IoGridOutline className="w-[20px] h-[20px] mx-3"/>
+            <IoGridOutline className="w-[17px] h-[17px] mx-3"/>
           </div>
         </div>
       </div>
