@@ -21,6 +21,7 @@ const CodeThinkingProcess = () => {
         <li>Code Card View Screen UI</li>
         <li>Code Country Details - Main</li>
         <li>Code Country Details Screen & Header UI</li>
+        <li>Install Axios for API</li>
       </ol>
 
       <br/>
@@ -30,7 +31,7 @@ const CodeThinkingProcess = () => {
         <li>npm install -D tailwindcss</li>
         <li>npm install @babel/plugin-proposal-private-property-in-object</li>
         <li>npm install react-icons --save</li>
-        <li>x</li>
+        <li>npm install axios</li>
         <li>x</li>
         <li>x</li>
         <li>x</li>
