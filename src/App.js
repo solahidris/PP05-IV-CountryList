@@ -6,13 +6,9 @@ import CountryLists from "./components/CountryLists";
 
 function App() {
   return (
-    <div className="bg-stone-100/50 min-h-[100vh]">
+    <div className="bg-stone-100 min-h-[100vh]">
       <CountryLists />
-      <div>
-        <p className="py-5">hi</p>
-        <p className="py-5">hi</p>
-        <p className="py-5">hi</p>
-      </div>
+
       <CodeThinkingProcess />
       <CodeInstructions />
 

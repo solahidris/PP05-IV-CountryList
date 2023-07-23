@@ -5,6 +5,7 @@ import FilterRegion from "./FilterRegion";
 import ViewToggleButton from "./ViewToggleButton";
 import { IoList, IoGridOutline } from "react-icons/io5";
 import ListViewScreen from "./ListViewScreen";
+import CardViewScreen from "./CardViewScreen";
 
 const CountryLists = () => {
   return (
@@ -24,21 +25,12 @@ const CountryLists = () => {
         </div>
       </div>
 
-      <ListViewScreen />
+      {/* <ListViewScreen /> */}
+      <CardViewScreen />
 
-      <div className="card view - use flex col bg-green-200">
-        <div className="map this">
-          <div className="flex flex-col">
-            <span>flagImage</span>
-            <span>CountryName</span>
-            <span>Population: xxx</span>
-            <span>Region: xxx</span> 
-            <span>Capital: xxx</span>
-          </div>
-        </div>
-      </div>
 
-      <p className="bg-yellow-200">test test</p>
+
+      <p className="bg-yellow-100 mt-5">----- end of app. below is documentation ------</p>
     </div>
   );
 };

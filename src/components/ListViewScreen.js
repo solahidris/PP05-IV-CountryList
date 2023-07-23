@@ -22,9 +22,7 @@ const ListViewScreen = () => {
       flag: "🇦🇮",
       population: "P3",
       region: "R3",
-      capital: "CA3",
       country: "CO3",
-      currency: "CU3",
     },
     {
       flag: "🇦🇶",
@@ -37,9 +35,9 @@ const ListViewScreen = () => {
   ];
 
   return (
-    
-    <div className="list view - use grid mx-5">
-      <div className="grid grid-cols-7 text-xs bg-blue-900 text-white py-4 rounded-t-md font-bold">
+    <div className="mx-5">
+
+      <div className="grid grid-cols-6 text-xs bg-blue-900 text-white py-4 rounded-t-md font-bold">
         <span></span>
         <span className="truncate ...">Population</span>
         <span>Region</span>
@@ -48,20 +46,21 @@ const ListViewScreen = () => {
         <span>Currency</span>
       </div>
 
-      <div className="map this">
+      <div>
         {dataToMap.map((data, index) => (
-          <div className="grid grid-cols-7 py-3 border-b border-gray-200/80 border-mx-2 items-center">
-            <span className="text-center text-[2rem]">{data.flag}</span>
+          <div className="grid grid-cols-6 py-5 border-b border-gray-200/80 border-mx-2 items-center text-xs">
+            <span className="text-center text-[3rem]">{data.flag}</span>
             <span>{data.population}</span>
             <span>{data.region}</span>
-            <span>{data.capital}</span>
-            <span>{data.capital}</span>
+            <span>{data?.capital}</span>
             <span>{data.country}</span>
-            <div className="">
-              <span className="border rounded-lg px-2 py-1 border-black text-blue-500">
-                {data.currency}
-              </span>
-            </div>
+            {data.currency && (
+              <div>
+                <span className="border rounded-lg px-2 py-1 border-black text-blue-500">
+                  {data.currency}
+                </span>
+              </div>
+            )}
           </div>
         ))}
       </div>

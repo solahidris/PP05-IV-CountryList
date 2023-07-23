@@ -18,6 +18,7 @@ const CodeThinkingProcess = () => {
         <li>Install React Icons</li>
         <li>Add List & Card View Icons</li>
         <li>Code List View Screen UI</li>
+        <li>Code Card View Screen UI</li>
       </ol>
 
       <br/>
