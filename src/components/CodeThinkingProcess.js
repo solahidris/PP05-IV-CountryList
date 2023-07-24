@@ -28,6 +28,8 @@ const CodeThinkingProcess = () => {
         <li>Connect Serach Input & Filter region</li>
         <li>Install react router dom</li>
         <li>Code Country Details Route Display</li>
+        <li>Connect Everything</li>
+        <li>Clean up code</li>
       </ol>
 
       <br/>
@@ -39,9 +41,6 @@ const CodeThinkingProcess = () => {
         <li>npm install react-icons --save</li>
         <li>npm install axios</li>
         <li>npm install react-router-dom</li>
-        <li>x</li>
-        <li>x</li>
-        <li>x</li>
       </ul>
 
     </div>

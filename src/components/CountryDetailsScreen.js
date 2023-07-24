@@ -112,7 +112,7 @@ const CountryDetailsScreen = () => {
               ))}
             </div>
           )}
-          {!country.borders || country.borders.length === 0 && (
+          {(!country.borders || country.borders.length === 0) && (
             <div className="text-sm text-stone-400">No border countries</div>
           )}
         </div>

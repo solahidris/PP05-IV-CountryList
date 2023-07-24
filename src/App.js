@@ -1,21 +1,19 @@
+// App.js
+
 import "./App.css";
 import React from "react";
-import CodeThinkingProcess from "./components/CodeThinkingProcess";
-import CodeInstructions from "./components/CodeInstructions";
 import CountryLists from "./components/CountryLists";
 // eslint-disable-next-line
-import CountryDetails from "./components/CountryDetails";
+import CodeThinkingProcess from "./components/CodeThinkingProcess";
+// eslint-disable-next-line
+import CodeInstructions from "./components/CodeInstructions";
 
 function App() {
   return (
     <div className="bg-stone-100 min-h-[100vh]">
       <CountryLists />
-      {/* <CountryDetails /> */}
-
-      <CodeThinkingProcess />
-      <CodeInstructions />
-
-      <p className="text-xs">this is the main branch</p><br/>
+      {/* <CodeInstructions /> */}
+      {/* <CodeThinkingProcess /> */}
     </div>
   );
 }

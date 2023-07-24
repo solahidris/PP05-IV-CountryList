@@ -3,16 +3,24 @@
 import React from "react";
 import CountryDetailsHeader from "./CountryDetailsHeader";
 import CountryDetailsScreen from "./CountryDetailsScreen";
-import { Routes, Route } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import useCountryData from "./useCountryData";
 
-const CountryDetails = ({ data }) => {
+const CountryDetails = () => {
+  const { countryId } = useParams();
+  const data = useCountryData();
+
+  // Find the country data based on the countryId (cca3)
+  const country = data.find((item) => item.cca3 === countryId);
+
+  if (!country) {
+    return <div>Loading...</div>; // Show loading state
+  }
+
   return (
     <div>
       <CountryDetailsHeader />
-      <Routes>
-        <Route path="/" element={<CountryDetailsScreen data={data} />} />
-      </Routes>
-      <p className="bg-yellow-100 mt-5">----- end of app. below is documentation ------</p>
+      <CountryDetailsScreen country={country} />
     </div>
   );
 };
