@@ -24,6 +24,9 @@ const CodeThinkingProcess = () => {
         <li>Install Axios for API</li>
         <li>Fetch Data from API with Axios</li>
         <li>Create custom hook for API data</li>
+        <li>Connect View Toggle Button</li>
+        <li>Connect Serach Input & Filter region</li>
+        <li>Install react router dom</li>
       </ol>
 
       <br/>
@@ -34,6 +37,7 @@ const CodeThinkingProcess = () => {
         <li>npm install @babel/plugin-proposal-private-property-in-object</li>
         <li>npm install react-icons --save</li>
         <li>npm install axios</li>
+        <li>npm install react-router-dom</li>
         <li>x</li>
         <li>x</li>
         <li>x</li>
