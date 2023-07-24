@@ -1,6 +1,7 @@
 // CountryLists.js
 
 import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CountryListHeader from "./CountryListHeader";
 import SearchCountry from "./SearchCountry";
 import FilterRegion from "./FilterRegion";
@@ -8,6 +9,7 @@ import ViewToggleButton from "./ViewToggleButton";
 import { IoList, IoGridOutline } from "react-icons/io5";
 import ListViewScreen from "./ListViewScreen";
 import CardViewScreen from "./CardViewScreen";
+import CountryDetails from "./CountryDetails";
 import useCountryData from "./useCountryData";
 
 const CountryLists = () => {
@@ -30,29 +32,39 @@ const CountryLists = () => {
   const data = useCountryData();
 
   return (
-    <div>
-      <CountryListHeader />
+    <Router>
+      <div>
+        <CountryListHeader />
 
-      <div className="flex justify-between lg:mx-[3rem]">
-        <SearchCountry onSearch={handleSearch} />
-        <div className="flex">
-          <FilterRegion data={data} onFilter={handleRegionFilter} />
-          <div className="flex items-center">
-            <IoList className="w-[17px] h-[17px] mx-3" />
-            <ViewToggleButton onToggle={handleToggleView} />
-            <IoGridOutline className="w-[17px] h-[17px] mx-3" />
+        <div className="flex justify-between lg:mx-[3rem]">
+          <SearchCountry onSearch={handleSearch} />
+          <div className="flex">
+            <FilterRegion data={data} onFilter={handleRegionFilter} />
+            <div className="flex items-center">
+              <IoList className="w-[17px] h-[17px] mx-3" />
+              <ViewToggleButton onToggle={handleToggleView} />
+              <IoGridOutline className="w-[17px] h-[17px] mx-3" />
+            </div>
           </div>
         </div>
+
+        <Routes>
+          <Route
+            path="/"
+            element={
+              cardView ? (
+                <CardViewScreen data={data} searchText={searchText} selectedRegion={selectedRegion} />
+              ) : (
+                <ListViewScreen data={data} searchText={searchText} selectedRegion={selectedRegion} />
+              )
+            }
+          />
+          <Route path="/country/:countryId" element={<CountryDetails data={data} />} />
+        </Routes>
+
+        <p className="bg-yellow-100 mt-5">----- end of app. below is documentation ------</p>
       </div>
-
-      {cardView ? (
-        <CardViewScreen data={data} searchText={searchText} selectedRegion={selectedRegion} />
-      ) : (
-        <ListViewScreen data={data} searchText={searchText} selectedRegion={selectedRegion} />
-      )}
-
-      <p className="bg-yellow-100 mt-5">----- end of app. below is documentation ------</p>
-    </div>
+    </Router>
   );
 };
 

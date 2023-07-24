@@ -3,14 +3,15 @@
 import React from "react";
 import CountryDetailsHeader from "./CountryDetailsHeader";
 import CountryDetailsScreen from "./CountryDetailsScreen";
+import { Routes, Route } from "react-router-dom";
 
-const CountryDetails = () => {
+const CountryDetails = ({ data }) => {
   return (
     <div>
-
       <CountryDetailsHeader />
-      <CountryDetailsScreen />
-
+      <Routes>
+        <Route path="/" element={<CountryDetailsScreen data={data} />} />
+      </Routes>
       <p className="bg-yellow-100 mt-5">----- end of app. below is documentation ------</p>
     </div>
   );

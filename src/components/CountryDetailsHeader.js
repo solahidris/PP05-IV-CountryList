@@ -7,7 +7,7 @@ const CountryDetailsHeader = () => {
   return (
     <div className="bg-white drop-shadow-lg mb-5">
       <div className="flex justify-between p-5">
-        <h1 className="text-xl font-semibold">Country Details</h1>
+        <h1 className="text-2xl font-medium">Country Details</h1>
         <div className="flex items-center gap-3">
         <BsSun /> 
         <button className="text-sm">Switch Dark Mode</button>

@@ -27,6 +27,7 @@ const CodeThinkingProcess = () => {
         <li>Connect View Toggle Button</li>
         <li>Connect Serach Input & Filter region</li>
         <li>Install react router dom</li>
+        <li>Code Country Details Route Display</li>
       </ol>
 
       <br/>
