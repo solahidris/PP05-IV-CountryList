@@ -30,6 +30,7 @@ const CodeThinkingProcess = () => {
         <li>Code Country Details Route Display</li>
         <li>Connect Everything</li>
         <li>Clean up code</li>
+        <li>Code Dark Mode - Tailwind CSS</li>
       </ol>
 
       <br/>

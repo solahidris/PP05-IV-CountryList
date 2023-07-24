@@ -12,8 +12,8 @@ function App() {
   return (
     <div className="bg-stone-100 min-h-[100vh]">
       <CountryLists />
-      {/* <CodeInstructions /> */}
       {/* <CodeThinkingProcess /> */}
+      {/* <CodeInstructions /> */}
     </div>
   );
 }
