@@ -1,30 +1,14 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+// ListViewScreen.js
+
+import React from "react";
+import useCountryData from "./useCountryData";
 
 const ListViewScreen = () => {
-  const [data, setData] = useState([]);
-
-  // Helper function to format number with commas
+  const data = useCountryData();
+  
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
-
-  useEffect(() => {
-    // Make a GET request to an API endpoint
-    axios
-      .get("https://restcountries.com/v3.1/all")
-      .then((response) => {
-        // Handle the response data
-        setData(response.data);
-
-        // Log the object structure
-        console.log(response.data);
-      })
-      .catch((error) => {
-        // Handle any errors that occurred during the request
-        console.error("Error fetching data:", error);
-      });
-  }, []);
 
   return (
     <div className="mx-5 lg:mx-[4rem]">

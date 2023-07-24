@@ -1,6 +1,6 @@
 // CountryLists.js
 
-import React from "react";
+import React, { useState } from "react";
 import CountryListHeader from "./CountryListHeader";
 import SearchCountry from "./SearchCountry";
 import FilterRegion from "./FilterRegion";
@@ -11,6 +11,9 @@ import ListViewScreen from "./ListViewScreen";
 import CardViewScreen from "./CardViewScreen";
 
 const CountryLists = () => {
+
+  const [cardView, setCardView] = useState(false);
+  
   return (
     <div>
       <CountryListHeader />
@@ -28,7 +31,7 @@ const CountryLists = () => {
       </div>
 
       <ListViewScreen />
-      {/* <CardViewScreen /> */}
+      <CardViewScreen />
 
 
 

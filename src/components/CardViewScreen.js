@@ -1,59 +1,36 @@
 // CardViewScreen.js
 
-const CardViewScreen = () => {
-  const dataToMap = [
-    {
-      flag: "🇦🇩",
-      population: "P1",
-      region: "R1",
-      capital: "CA1",
-      country: "CO1",
-      currency: "CU1",
-    },
-    {
-      flag: "🇦🇪",
-      population: "P2",
-      region: "R2",
-      capital: "CA2",
-      country: "CO2",
-      currency: "CU2",
-    },
-    {
-      flag: "🇦🇮",
-      population: "P3",
-      region: "R3",
+import React from "react";
+import useCountryData from "./useCountryData";
 
-      country: "CO3",
-    },
-    {
-      flag: "🇦🇶",
-      population: "P4",
-      region: "R4",
-      capital: "CA4",
-      country: "CO4",
-      currency: "CU4",
-    },
-  ];
+const CardViewScreen = () => {
+  const data = useCountryData();
 
   return (
     <div className="mx-5">
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 gap-y-[1.5rem]">
-        {dataToMap.map((data, index) => (
-          <div className="flex flex-col text-sm lg:text-base">
-            <span className="bg-red-200">{data.flag}</span>
+        {data.map((item, index) => (
+          <div className="flex flex-col text-sm lg:text-base" key={index}>
+            {/* Replace flag emoji with SVG */}
+            <img
+              src={item?.flags?.svg}
+              alt={item?.name?.common}
+              style={{ width: "100%", height: "8rem", objectFit: "fill" }}
+              className="justify-self-center"
+            />
             <div className="bg-white rounded drop-shadow-md px-2 py-3 mt-3">
-              <span className="font-semibold">{data.country}</span>
+              <span className="font-semibold">{item?.name?.common}</span>
               <div className="flex gap-1">
                 <span className="font-semibold">Population:</span>
-                <span className="text-stone-400">{data.region}</span>
+                <span className="text-stone-400">{item?.population}</span>
               </div>
               <div className="flex gap-1">
                 <span className="font-semibold">Region:</span>
-                <span className="text-stone-400">{data.population}</span>
+                <span className="text-stone-400">{item?.region}</span>
               </div>
               <div className="flex gap-1">
                 <span className="font-semibold">Capital:</span>
-                <span className="text-stone-400">{data?.capital}</span>
+                <span className="text-stone-400">{item?.capital?.[0]}</span>
               </div>
             </div>
           </div>
