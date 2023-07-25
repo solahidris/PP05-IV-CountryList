@@ -1,71 +1,62 @@
-# Getting Started with Create React App
+# Frontend Coding Test - Country List App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Instructions
 
-## Available Scripts
+Your task is to develop a country list app using React. The requirements are as follows:
 
-In the project directory, you can run:
+1. Create two screens: a list view and a card view.
+2. Integrate with a GET API (https://restcountries.com/v3.1/all) to retrieve country data.
+3. Populate the list view and card view with the country data.
+4. Implement the ability to toggle between the list view and card view.
+5. Implement a search functionality for users to search for a country using an input field.
+6. Implement a filter functionality for users to filter countries by region.
+7. Provide a separate page to display more detailed information when a country is clicked.
+8. Ensure the website is responsive and works well on both laptops and mobile devices.
+9. Implement a color scheme toggle between light and dark mode.
 
-### `npm start`
+You are allowed to use any React-compatible framework or library to assist in your development process, such as Next.js, Vite, Tailwind, Material UI, Axios, etc.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+You are also required to create a README file (README.md) and include it in the code repository. The README should provide a brief explanation of your code structure, as well as any libraries or packages used in the development process.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The attached images are provided for reference purposes only. You have complete freedom to develop your own design and be as creative as you desire.
 
-### `npm test`
+You are given 1 week to complete this test.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Deployment & Submission
 
-### `npm run build`
+1. Upload your code to a Github repository and make it public.
+2. Deploy your app to a free static hosting website such as Github pages, Vercel, Netlify, etc.
+3. Send us the Github repository URL and the live site URL via email.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Code Thinking Process
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Install Tailwind CSS.
+2. Install any missing React dependencies.
+3. Start making components and draft a UI design for the app.
+4. Code the Country List Header UI.
+5. Code the Search Country UI.
+6. Code the Filter by Region UI.
+7. Code the View Toggle Button UI.
+8. Install React Icons and add List & Card View icons.
+9. Code the List View Screen UI.
+10. Code the Card View Screen UI.
+11. Code the Country Details - Main component.
+12. Code the Country Details Screen & Header UI.
+13. Install Axios for API calls.
+14. Fetch data from the API with Axios and create a custom hook for API data.
+15. Connect the View Toggle Button to switch between list and card view.
+16. Connect the Search Input and Filter by Region to filter the countries.
+17. Install `react-router-dom` for handling routes.
+18. Code the Country Details Route Display.
+19. Connect everything and ensure data is displayed correctly.
+20. Clean up code and refactor if necessary.
+21. Code the Dark Mode using Tailwind CSS.
+22. Code the Dark Mode custom hook to save the user's preference in local storage.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Libraries Used
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# PP05-IV-CountryList
+- tailwindcss (`npm install -D tailwindcss`)
+- @babel/plugin-proposal-private-property-in-object (`npm install @babel/plugin-proposal-private-property-in-object`)
+- react-icons (`npm install react-icons --save`)
+- axios (`npm install axios`)
+- react-router-dom (`npm install react-router-dom`)

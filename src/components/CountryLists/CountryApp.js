@@ -3,14 +3,14 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CountryListHeader from "./CountryListHeader";
-import SearchCountry from "./SearchCountry";
-import FilterRegion from "./FilterRegion";
-import ViewToggleButton from "./ViewToggleButton";
+import SearchCountry from "../buttonsAndInputs/SearchCountry";
+import FilterRegion from "../buttonsAndInputs/FilterRegion";
+import ViewToggleButton from "../buttonsAndInputs/ViewToggleButton";
 import { IoList, IoGridOutline } from "react-icons/io5";
 import ListViewScreen from "./ListViewScreen";
 import CardViewScreen from "./CardViewScreen";
-import CountryDetails from "./CountryDetails";
-import useCountryData from "./hooks/useCountryData";
+import CountryDetails from "../CountryDetails/CountryDetails";
+import useCountryData from "../hooks/useCountryData";
 
 const CountryLists = () => {
   const [cardView, setCardView] = useState(false);

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { BsSun, BsMoon } from "react-icons/bs";
-import useDarkMode from "./hooks/useDarkMode";
+import useDarkMode from "../hooks/useDarkMode";
 
 const CountryListHeader = () => {
   const [isDarkMode, setIsDarkMode] = useDarkMode();

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import useCountryData from "./hooks/useCountryData";
+import useCountryData from "../hooks/useCountryData";
 
 const ListViewScreen = ({ searchText, selectedRegion }) => {
   const data = useCountryData();

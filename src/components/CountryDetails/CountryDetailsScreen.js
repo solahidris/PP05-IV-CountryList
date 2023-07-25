@@ -3,7 +3,7 @@
 import React from "react";
 import { HiArrowLeft } from "react-icons/hi";
 import { useParams, useNavigate } from "react-router-dom";
-import useCountryData from "./hooks/useCountryData";
+import useCountryData from "../hooks/useCountryData";
 
 const CountryDetailsScreen = () => {
   const { countryId } = useParams();
