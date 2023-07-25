@@ -16,10 +16,10 @@ const SearchCountry = ({ onSearch }) => {
       {/* <p>L-Search for a Country</p> */}
       <input
         type="text"
-        placeholder="🔍   Search for a country"
+        placeholder="🔍 Search for a country"
         value={searchText}
         onChange={handleChange}
-        className="py-3 px-3 lg:px-[3rem] ml-4 text-xs rounded-md border border-stone-300 bg-white dark:border-slate-600 dark:bg-slate-800 w-full"
+        className="py-2 px-1 lg:px-[3rem] ml-4 text-xs rounded-md border border-stone-300 bg-white dark:border-slate-600 dark:bg-slate-800 dark:text-white w-full"
       />
     </div>
   );
