@@ -4,7 +4,7 @@ import React from "react";
 import CountryDetailsHeader from "./CountryDetailsHeader";
 import CountryDetailsScreen from "./CountryDetailsScreen";
 import { useParams } from "react-router-dom";
-import useCountryData from "./useCountryData";
+import useCountryData from "./hooks/useCountryData";
 
 const CountryDetails = () => {
   const { countryId } = useParams();

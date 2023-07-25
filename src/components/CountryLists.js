@@ -10,7 +10,7 @@ import { IoList, IoGridOutline } from "react-icons/io5";
 import ListViewScreen from "./ListViewScreen";
 import CardViewScreen from "./CardViewScreen";
 import CountryDetails from "./CountryDetails";
-import useCountryData from "./useCountryData";
+import useCountryData from "./hooks/useCountryData";
 
 const CountryLists = () => {
   const [cardView, setCardView] = useState(false);

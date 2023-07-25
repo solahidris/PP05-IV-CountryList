@@ -31,6 +31,7 @@ const CodeThinkingProcess = () => {
         <li>Connect Everything</li>
         <li>Clean up code</li>
         <li>Code Dark Mode - Tailwind CSS</li>
+        <li>Code Dark Mode Custom Hook to Local Storage</li>
       </ol>
 
       <br/>

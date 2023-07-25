@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import useCountryData from "./useCountryData";
+import useCountryData from "./hooks/useCountryData";
 
 const CardViewScreen = ({ searchText, selectedRegion }) => {
   const data = useCountryData();

@@ -3,7 +3,7 @@
 import React from "react";
 import { HiArrowLeft } from "react-icons/hi";
 import { useParams, useNavigate } from "react-router-dom";
-import useCountryData from "./useCountryData";
+import useCountryData from "./hooks/useCountryData";
 
 const CountryDetailsScreen = () => {
   const { countryId } = useParams();
@@ -20,12 +20,12 @@ const CountryDetailsScreen = () => {
   }
 
   return (
-    <div className="mx-5 pt-2">
+    <div className="mx-5 pt-2 dark:text-white pb-5">
       <button
-        className="flex items-center gap-3 border border-sky-600 text-sky-600 rounded-md py-2 px-4"
+        className="flex items-center gap-3 border border-sky-600 text-sky-600 rounded-md py-2 px-4 dark:text-sky-200 dark:border-sky-200"
         onClick={handleBack}
       >
-        <HiArrowLeft className="text-sky-600" />
+        <HiArrowLeft className="text-sky-600  dark:text-sky-200" />
         Back
       </button>
 
@@ -53,46 +53,46 @@ const CountryDetailsScreen = () => {
               <span className="text-xl font-semibold pb-2">
                 {country.name.common}
               </span>
-              <div className="flex gap-1">
+              <div className="flex gap-[3px] lg:gap-1">
                 <span className="font-medium">Native name:</span>
-                <span className="text-stone-400">
+                <span className="text-stone-500/80 dark:text-stone-300">
                   {country.name.native?.common}
                 </span>
               </div>
-              <div className="flex gap-1">
+              <div className="flex gap-[3px] lg:gap-1">
                 <span className="font-medium">Population:</span>
-                <span className="text-stone-400">{country.population}</span>
+                <span className="text-stone-500/80 dark:text-stone-300">{country.population}</span>
               </div>
-              <div className="flex gap-1">
+              <div className="flex gap-[3px] lg:gap-1">
                 <span className="font-medium">Region:</span>
-                <span className="text-stone-400">{country.region}</span>
+                <span className="text-stone-500/80 dark:text-stone-300">{country.region}</span>
               </div>
-              <div className="flex gap-1">
+              <div className="flex gap-[3px] lg:gap-1">
                 <span className="font-medium">Sub region:</span>
-                <span className="text-stone-400">{country.subregion}</span>
+                <span className="text-stone-500/80 dark:text-stone-300">{country.subregion}</span>
               </div>
-              <div className="flex gap-1 lg:pb-5">
+              <div className="flex gap-[3px] lg:gap-1 lg:pb-5">
                 <span className="font-medium">Capital:</span>
-                <span className="text-stone-400">{country.capital?.[0]}</span>
+                <span className="text-stone-500/80 dark:text-stone-300">{country.capital?.[0]}</span>
               </div>
             </div>
 
             <div className="flex flex-col justify-center lg:justify-between grow">
-              <div className="flex gap-1 lg:mt-[13%] lg:mt-0">
+              <div className="flex gap-[3px] lg:gap-1 lg:mt-[13%] lg:mt-0">
                 <span className="font-medium">Top level domain:</span>
-                <span className="text-stone-400">
+                <span className="text-stone-500/80 dark:text-stone-300">
                   {country.tld?.join(", ")}
                 </span>
               </div>
-              <div className="flex gap-1">
+              <div className="flex gap-[3px] lg:gap-1">
                 <span className="font-medium">Currency:</span>
-                <span className="text-stone-400">
+                <span className="text-stone-500/80 dark:text-stone-300">
                   {Object.keys(country.currencies).join(", ")}
                 </span>
               </div>
-              <div className="flex gap-1 lg:mb-[25%] lg:mb-0">
+              <div className="flex gap-[3px] lg:gap-1 lg:mb-[25%] lg:mb-0">
                 <span className="font-medium">Languages:</span>
-                <span className="text-stone-400">
+                <span className="text-stone-500/80 dark:text-stone-300">
                   {Object.keys(country.languages).join(", ")}
                 </span>
               </div>
@@ -100,7 +100,7 @@ const CountryDetailsScreen = () => {
           </div>
 
           {country.borders && country.borders.length > 0 && (
-            <div className="text-sm gap-1 flex items-center flex-wrap">
+            <div className="text-sm gap-[3px] lg:gap-1 flex items-center flex-wrap">
               <span className="font-medium gap-1">Border Countries:</span>
               {country.borders.map((border) => (
                 <span
@@ -113,7 +113,7 @@ const CountryDetailsScreen = () => {
             </div>
           )}
           {(!country.borders || country.borders.length === 0) && (
-            <div className="text-sm text-stone-400">No border countries</div>
+            <div className="text-sm text-stone-500/80 dark:text-stone-300">No border countries</div>
           )}
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import useCountryData from "./useCountryData";
+import useCountryData from "./hooks/useCountryData";
 
 const ListViewScreen = ({ searchText, selectedRegion }) => {
   const data = useCountryData();
@@ -21,8 +21,8 @@ const ListViewScreen = ({ searchText, selectedRegion }) => {
   };
 
   return (
-    <div className="mx-5 lg:mx-[4rem]">
-      <div className="grid grid-cols-6 text-xs lg:text-base bg-blue-900 text-white py-4 rounded-t-md font-bold">
+    <div className="mx-5 lg:mx-[4rem] dark:text-white">
+      <div className="grid grid-cols-6 text-xs lg:text-base bg-blue-900 dark:bg-slate-800 text-white py-4 rounded-t-md font-bold">
         <span></span>
         <span className="truncate ...">Population</span>
         <span>Region</span>
@@ -50,7 +50,7 @@ const ListViewScreen = ({ searchText, selectedRegion }) => {
               <span>{item?.name?.common}</span>
               {item?.currencies && (
                 <div>
-                  <span className="border rounded-lg px-2 py-1 border-black text-blue-500">
+                  <span className="border rounded-lg px-2 py-1 border-black dark:border-white text-blue-500 dark:text-blue-300">
                     {Object.keys(item.currencies).join(", ")}
                   </span>
                 </div>
