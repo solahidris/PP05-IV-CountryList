@@ -43,7 +43,7 @@ const CountryLists = () => {
                   <div>
                     <CountryListHeader />
                     <div className="flex justify-between lg:mx-[3rem]">
-                      <SearchCountry onSearch={handleSearch} />
+                      <div><SearchCountry onSearch={handleSearch} /></div>
                       <div className="flex">
                         <FilterRegion
                           data={data}
